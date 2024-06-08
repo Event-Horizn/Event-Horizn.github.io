@@ -8,18 +8,29 @@ body {
     width: 100vw;
     background-color: black;
     margin: 0;
-    overflow: hidden;
 }
 
-.EpicTitleThingBackground {
+.ParallaxWrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 10px;
+    transform-style: preserve-3d;
+}
+
+.TitleBackground {
     display: flex;
     height: 50vh;
     width: 100vw;
     margin: 0;
-    background-color: #fff5ff
+    position: relative;
+    background-color: #fff5ff;
+    z-index: -3;
 }
 
-.EpicTitleThing {
+.TitleContainer {
+    height: 50vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +38,8 @@ body {
     position: absolute;
     left: 50%;
     top: 25%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -25%) translateZ(-10px) scale(2);
+    z-index: -1;
 }
 
 .Title1 {
